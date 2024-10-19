@@ -1,14 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- naam:              -->
+<html lang="nl">
+<!-- naam: Aki Kasumi Izumi Borst -->
 <head>
     <meta charset="UTF-8">
     <title>Oef3</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta charset="utf-8">
+    <link href="./assets/css/oef3.css" rel="stylesheet">
 </head>
 <body>
 <h1>Mussen vs Vinken</h1>
+<form>
+    <fieldset>
+        <legend>Algemeen</legend>
+        <div>
+            <label for="Datum">Datum:</label>
+            <input id="Datum" type="date" name="datum" required>
+        </div>
+        <div>
+            <label for="tijd">Tijd:</label>
+            <select id="tijd" name="tijd" required>
+                <option></option>
+                <option value="0_6">0u &#x002D; 6u</option>
+                <option value="6_12">6u &#x002D; 12u</option>
+                <option value="12_18">12u &#x002D; 18u</option>
+                <option value="18_24">18u &#x002D; 24u</option>
+            </select>
+        </div>
+        <div>
+            <label for="neerslag">Neerslag:</label>
+            <input id="neerslag_geen" name="neerslag" type="radio" value="geen" required>
+            <label for="neerslag_geen">geen</label>
+            <input id="neerslag_matig" name="neerslag" type="radio" value="matig" required>
+            <label for="neerslag_matig">matig</label>
+            <input id="neerslag_overvloedig" name="neerslag" type="radio" value="overvloedig" required>
+            <label for="neerslag_overvloedig">overvloedig</label>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Vogels</legend>
+        <div>
+            <img src="./assets/images/mus.png" alt="mus.png">
+            <label for="aantal_mus">&#x0023;Mussen:</label>
+            <input id="aantal_mus" type="number" name="aantal_mus" min="0" max="10" step="1" required>
+            <label for="zekerheid_mus">zeker:</label>
+            <input id="zekerheid_mus" type="range" name="zekerheid_mus" min="0" max="100" value="50" step="1">
+        </div>
+        <div>
+            <img src="./assets/images/vink.png" alt="vink.png">
+            <label for="aantal_vink">&#x0023;Vinken:</label>
+            <input id="aantal_vink" type="number" name="aantal_vink" min="0" max="10" step="1" required>
+            <label for="zekerheid_vink">zeker:</label>
+            <input id="zekerheid_vink" type="range" name="zekerheid_vink" min="0" max="100" value="50" step="1">
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Acties</legend>
+        <input type="submit" value="registreer">
+        <input type="reset" value="Maak leeg">
+    </fieldset>
+</form>
 
 </body>
 </html>
